@@ -9,6 +9,9 @@ export default {
     }
   ],
   theme: {
+    fontFamily:{
+      'mant':["Mantou Sans"],
+    },
     extend: {
       height:{
         'headerHeight':"6.25rem"
