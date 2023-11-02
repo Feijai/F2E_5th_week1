@@ -8,6 +8,7 @@ interface SingLogoProps {
   textMarginLeft: string;
   numberSize?: string;
   shadow?: boolean;
+  padding?: boolean;
 }
 
 const SingLogo: React.FC<SingLogoProps> = React.memo(
@@ -18,13 +19,14 @@ const SingLogo: React.FC<SingLogoProps> = React.memo(
     textMarginLeft = "2",
     numberSize = "8",
     shadow = false,
+    padding = true,
   }) => {
     React.useLayoutEffect(() => {}, []);
     return (
       <div
-        className={`${
-            shadow && "shadow-lg"
-        } flex px-[16px] py-[12px] rounded-[16px]`}
+        className={`${shadow && "shadow-lg"} ${
+          padding && "px-[16px] py-[12px]"
+        } flex rounded-[16px]`}
       >
         {useLogo ? (
           <img src={logo} alt="" className={`h-${logoSize}`} />

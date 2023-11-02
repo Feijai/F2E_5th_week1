@@ -19,7 +19,7 @@ export default function Frame1() {
           喵先鋪路
         </h1>
         <div className="mt-[16px] contents md:flex md:items-center">
-          <TextBlock />
+          <TextBlock text="2024 立委參選人" />
           <SingLogo
             useLogo={false}
             textSize="3xl"

@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function TextBlock() {
+const TextBlock: React.FC<{ text: string }> = ({ text }) => {
   return (
     <span className="rounded-2xl px-[16px] py-[12px] bg-textPrimary text-white text-[20px] h-fit">
-      2024 立委參選人
+      {text}
     </span>
   );
-}
+};
+
+export default TextBlock;
