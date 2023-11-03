@@ -7,5 +7,17 @@
   src: url("./assets/fontFamily/MantouSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fontFamily/Inter.ttf");
+}
+
 :root {
+  font-family: "Inter";
+  color: #334155;
+}
+html,
+body,
+#root {
+  height: 100%;
 }

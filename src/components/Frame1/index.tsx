@@ -29,7 +29,7 @@ export default function Frame1() {
           />
         </div>
       </div>
-      <div className="bg-[url('@/assets/image12.png')] h-[255px] bg-contain bg-center bg-no-repeat relative ">
+      <div className="bg-[url('@/assets/image12.png')] h-[255px] bg-contain bg-center bg-no-repeat relative lg:h-[537px] ">
         <div className="md:hidden absolute w-[208px] px-[40px] py-[8px] flex items-center justify-between bg-white rounded-[16px] bottom-[5%] left-1/2 transform -translate-x-1/2 translate-y-0">
           <LinkButton icon={fb} width="32" height="32" />
           <LinkButton icon={ig} width="32" height="32" />

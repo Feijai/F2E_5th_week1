@@ -11,6 +11,7 @@ export default {
   theme: {
     fontFamily:{
       'mant':["Mantou Sans"],
+      'inter':["Inter"]
     },
     extend: {
       height:{
@@ -21,7 +22,7 @@ export default {
         "textPrimary":'#334155',
         "bgFooter":"#F7ECE1",
         "linerStart":"#E5793B",
-        "linerEnd":"#FF4185"
+        "linerEnd":"#FF4185",
       }
     },
   },
