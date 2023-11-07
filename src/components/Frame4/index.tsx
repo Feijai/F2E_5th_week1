@@ -10,24 +10,30 @@ const PolicyCard: React.FC<{ text: ReactElement; img: string }> = ({
   img,
 }) => {
   return (
-    <div>
+    <div className="xl:w-[397.33px]">
       <div className="px-[16px] py-[16px] pt-0">
-        <h4 className="font-bold text-[24px] leading-[36px]">{text}</h4>
+        <h4 className="font-bold text-[24px] leading-[36px] h-[88px]">
+          {text}
+        </h4>
       </div>
-      <img src={img} alt="" className="rounded-[16px] max-h-[229px]" />
+      <img
+        src={img}
+        alt=""
+        className="rounded-[16px] max-h-[229px] w-full object-cover object-center"
+      />
     </div>
   );
 };
 
 export default function Frame4() {
   return (
-    <div className="px-[16px] py-[64px]">
+    <div className="px-[16px] py-[64px] md:px-[36px]">
       <div>
-        <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center flex-col ">
           <TextBlock text="POLICY ISSUES" />
           <TitleBlock text={<>政策議題</>} />
         </div>
-        <div className="flex flex-col mt-[40px] gap-[64px]">
+        <div className="mt-[40px] grid grid-cols-1 gap-y-[64px] md:grid-cols-2 md:gap-x-[24px] md:pt-[40px] xl:mt-0 xl:px-[64px] xl:gap-x-[64px] xl:flex xl:justify-center xl:items-center xl:mb-[40px]">
           <PolicyCard
             text={
               <>

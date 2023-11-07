@@ -2,7 +2,7 @@ import React from "react";
 import TextBlock from "../TextBlock";
 import TitleBlock from "../TitleBlock";
 import data from "./data";
-import right_arr from "@/assets/icon/right_arr.png";
+import TextButton from "../TextButton";
 interface NewsCardProps {
   img: string;
   isCol: boolean;
@@ -66,14 +66,9 @@ export default function Frame3() {
             {data.slice(1).map((element) => (
               <NewsCard {...element} />
             ))}
-            <button className="font-semibold self-start rounded-[500px] px-[24px] py-[16px] bg-slate-100 flex text-[16px] items-center">
-              查看更多
-              <img
-                src={right_arr}
-                alt=""
-                className="ml-[8px] w-[32px] h-[32px]"
-              />
-            </button>
+            <div>
+              <TextButton text="查看更多" bgColor="slate-100" />
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@ export default {
       pattern: /(w|h|ml)-.+/,
     },{
       pattern:/text-(2xl|xl|3xl)/
+    },{
+      pattern:/bg-(textPrimary|slate-100|primary)/
     }
   ],
   theme: {
