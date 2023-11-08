@@ -64,7 +64,7 @@ export default function Frame3() {
           </div>
           <div className="flex flex-col gap-[24px] mt-[24px] xl:mt-0 xl:w-[33.75%]">
             {data.slice(1).map((element) => (
-              <NewsCard {...element} />
+              <NewsCard {...element} key={element.id} />
             ))}
             <div>
               <TextButton text="查看更多" bgColor="slate-100" />

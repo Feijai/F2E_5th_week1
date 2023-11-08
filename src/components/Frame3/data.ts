@@ -5,6 +5,7 @@ import img3 from "@/assets/events/img3.png";
 
 const data = [
   {
+    id: "1qaz",
     img: top,
     isCol: true,
     date: "2023/12/26",
@@ -13,6 +14,7 @@ const data = [
       "炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。",
   },
   {
+    id: "2wsx",
     img: img1,
     isCol: false,
     date: "2023/12/24",
@@ -21,6 +23,7 @@ const data = [
       "街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！",
   },
   {
+    id: "3edc",
     img: img2,
     isCol: false,
     date: "2023/12/20",
@@ -29,6 +32,7 @@ const data = [
       "今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！",
   },
   {
+    id: "4rfv",
     img: img3,
     isCol: false,
     date: "2023/12/26",

@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Carousel from "../Carousel";
 import TitleBlock from "../TitleBlock";
+import { gsap } from "gsap";
 
-export default function index() {
+export default function Frame2() {
+  const frame2Animate = useRef<HTMLDivElement | null>(null);
+
+  useLayoutEffect(() => {
+    const loop = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".movingCard",
+            pin: true,
+            markers: true, // 標記
+            scrub: true,
+            start: "100", // when the top of the trigger hits the top of the viewport
+            end: "+=200", // end after scrolling 500px beyond the start
+          },
+        })
+        .to(".movingCard", {
+          yPercent: "50",
+          opacity: 0,
+          visibility: "invisible",
+          duration: 0,
+        })
+        .to(".movingCard", {
+          yPercent: "0",
+          ease: "sine.in",
+          opacity: 1,
+          duration: 1,
+        });
+    }, frame2Animate);
+
+    return () => loop.revert();
+  }, []);
+
   return (
-    <div className="">
+    <div className="" ref={frame2Animate}>
       <Carousel />
-      <div className="py-[64px] px-[16px] md:px-[36px] bg-bgFooter text-center xl:py-[104px] ">
-        <div className="rounded-3xl bg-white flex items-center justify-center flex-col xl:flex-row xl:w-[68.75%] xl:mx-auto xl:justify-between">
+      <div className=" py-[64px] px-[16px] md:px-[36px] bg-bgFooter text-center xl:py-[104px] ">
+        <div className="movingCard rounded-3xl bg-white flex items-center justify-center flex-col xl:flex-row xl:w-[68.75%] xl:mx-auto xl:justify-between">
           <div className="px-[24px] py-[40px] flex flex-col xl:max-w-[648px] xl:px-[40px] xl:py-[64px] xl:w-[calc(50%-12px)]">
             <div className="text-center">
               <p className="px-3 py-2 bg-textPrimary rounded-lg text-white text-[16px] inline-block">
