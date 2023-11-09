@@ -1,4 +1,3 @@
-import React from "react";
 import fb from "@/assets/icon/fb.png";
 import line from "@/assets/icon/line.png";
 import youtue from "@/assets/icon/youtue.png";

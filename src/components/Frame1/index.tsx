@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import SingLogo from "../SingLogo";
 import TextBlock from "../TextBlock";
 import LinkButton from "../LinkButton";

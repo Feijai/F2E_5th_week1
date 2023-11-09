@@ -1,4 +1,3 @@
-import React from "react";
 import SingLogo from "../SingLogo";
 import fb from "@/assets/icon/fb.png";
 import ig from "@/assets/icon/ig.png";

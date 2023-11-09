@@ -1,4 +1,3 @@
-import React from "react";
 import SingLogo from "../SingLogo";
 
 export default function Frame6() {
