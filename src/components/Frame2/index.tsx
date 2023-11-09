@@ -1,45 +1,46 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Carousel from "../Carousel";
 import TitleBlock from "../TitleBlock";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 
 export default function Frame2() {
   const frame2Animate = useRef<HTMLDivElement | null>(null);
 
-  useLayoutEffect(() => {
-    const loop = gsap.context(() => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
+    const ctx = gsap.context(() => {
       gsap
         .timeline({
           scrollTrigger: {
             trigger: ".movingCard",
             pin: true,
-            markers: true, // 標記
+            // markers: true, // 標記
             scrub: true,
-            start: "100", // when the top of the trigger hits the top of the viewport
-            end: "+=200", // end after scrolling 500px beyond the start
+            start: "top 80%", // when the top of the trigger hits the top of the viewport
+            end: "top 80%", // end after scrolling 500px beyond the start
           },
         })
-        .to(".movingCard", {
-          yPercent: "50",
+        .from(".movingCard", {
           opacity: 0,
-          visibility: "invisible",
-          duration: 0,
+          duration: 1,
+          y: 100,
         })
         .to(".movingCard", {
-          yPercent: "0",
-          ease: "sine.in",
           opacity: 1,
           duration: 1,
+          y: 0,
         });
     }, frame2Animate);
 
-    return () => loop.revert();
+    return () => ctx.revert();
   }, []);
 
   return (
     <div className="" ref={frame2Animate}>
       <Carousel />
-      <div className=" py-[64px] px-[16px] md:px-[36px] bg-bgFooter text-center xl:py-[104px] ">
+      <div className="flex items-center justify-center py-[64px] px-[16px] md:px-[36px] bg-bgFooter text-center xl:py-[104px] ">
         <div className="movingCard rounded-3xl bg-white flex items-center justify-center flex-col xl:flex-row xl:w-[68.75%] xl:mx-auto xl:justify-between">
           <div className="px-[24px] py-[40px] flex flex-col xl:max-w-[648px] xl:px-[40px] xl:py-[64px] xl:w-[calc(50%-12px)]">
             <div className="text-center">
